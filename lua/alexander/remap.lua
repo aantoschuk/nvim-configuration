@@ -28,9 +28,6 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
--- Bind Prettier to a key, e.g., <leader>f
-vim.api.nvim_set_keymap('n', '<leader>f', ':!prettier --write %<CR>', { noremap = true, silent = true })
-
 -- Harpoon keymaps
 vim.api.nvim_set_keymap('n', '<leader>h', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>', { noremap = true, silent = true })

@@ -28,8 +28,14 @@ plugins, and more—into dedicated Lua files within the alexander folder.
 
 `plugins/`: This directory contains configurations for specific plugins, which are later imported and used in lazy.lua.
 
+## Keymaps
+
+I have my own custom [keymaps](./docs/keymaps.md) in ```lua/alexander/remap.lua```,
+which help me be more productive by improving file navigation and plugin usage.
+
 ## Example
 
 I use standart MacOS Terminal with tmux with the background image
 
 ![Example of nvim configuration look](./assets/nvim-example.png)
+
