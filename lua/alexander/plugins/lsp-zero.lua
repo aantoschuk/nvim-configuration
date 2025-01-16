@@ -45,7 +45,7 @@ return {
 
       -- Configure TypeScript LSP server (ts_ls is an alias for typescript-language-server)
       lspconfig.ts_ls.setup({
-        filetypes = { "typescript", "typescriptreact" },
+        filetypes = { "typescript", "typescriptreact", "javascript" },
         on_attach = function(client, bufnr)
 
           -- Keybindings for TypeScript (optional)
