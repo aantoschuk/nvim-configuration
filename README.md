@@ -33,6 +33,10 @@ plugins, and more—into dedicated Lua files within the alexander folder.
 I have my own custom [keymaps](./docs/keymaps.md) in ```lua/alexander/remap.lua```,
 which help me be more productive by improving file navigation and plugin usage.
 
+## Plugins 
+
+Documentation about [plugins](./docs/plugins.md)
+
 ## Example
 
 I use standart MacOS Terminal with tmux with the background image
