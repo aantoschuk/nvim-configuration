@@ -8,7 +8,7 @@ function TransparentBackground(color)
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
   -- Set the ColorColumn background to red (bright red in this case)
-  vim.cmd [[highlight ColorColumn ctermbg=1 guibg=#8b0000]]
+  vim.cmd [[highlight ColorColumn ctermbg=1 guibg=#FFB899]]
 
   -- Optional: Set the ColorColumn to highlight the 80th column (you can change this value)
   vim.o.colorcolumn = "80"
