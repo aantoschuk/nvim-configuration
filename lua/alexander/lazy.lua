@@ -33,6 +33,8 @@ require("lazy").setup({
     require('alexander.plugins.lsp-zero'),
     require('alexander.plugins.harpoon'),
     require('alexander.plugins.markdown-preview'),
+    require('alexander.plugins.todo-comments'),
+    require('alexander.plugins.trouble'),
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

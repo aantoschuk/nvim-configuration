@@ -12,9 +12,9 @@ return {
         }
 	-- Keymap for 'find_files' using Telescope
 	local builtin = require('telescope.builtin')
-	vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 	vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Telescope find git files' })
-vim.keymap.set('n', '<leader>ps', function()
+    vim.keymap.set('n', '<leader>ps', function()
     local search_term = vim.fn.input("Grep > ")
     if search_term == "" then
         print("Search term cannot be empty!")
