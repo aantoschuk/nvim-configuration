@@ -54,7 +54,7 @@ return {
           vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = bufnr, desc = 'Hover Documentation' })
           vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = bufnr, desc = 'Rename Symbol' })
           vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = bufnr, desc = 'Code Action' })
-          vim.api.nvim_set_keymap('n', '<leader>f', ':!prettier --write %<CR>', { noremap = true, silent = true })
+          vim.api.nvim_set_keymap('n', '<leader>f', ':!prettier --write ' .. vim.fn.shellescape(vim.fn.expand('%'), 1) .. '<CR>', { noremap = true, silent = true })
         end,
       })
 
