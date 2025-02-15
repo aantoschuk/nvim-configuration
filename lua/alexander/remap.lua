@@ -29,6 +29,14 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Harpoon keymaps
+-- Open menu
 vim.api.nvim_set_keymap('n', '<leader>h', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true, silent = true })
+-- Mark file
 vim.api.nvim_set_keymap('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>', { noremap = true, silent = true })
 
+-- Open vertical split
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+-- Move to the right split ( window right )
+vim.keymap.set("n", "<leader>wr", ":wincmd l<CR>")
+-- Move to the left split ( window left )
+vim.keymap.set("n", "<leader>wl", ":wincmd h<CR>")

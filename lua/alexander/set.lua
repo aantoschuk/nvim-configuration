@@ -37,6 +37,12 @@ vim.opt.updatetime = 50
 -- set column to be 80 character width
 vim.opt.colorcolumn = "80"
 
--- shet leader button to space aka " "
+-- set leader button to space aka " "
 vim.g.mapleader = " "
+
+-- when joining lines, do not add aditional space beetwen them
+
+-- split vertically to the right 
+vim.opt.splitright = true
+
 

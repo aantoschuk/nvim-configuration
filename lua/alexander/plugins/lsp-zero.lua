@@ -29,9 +29,29 @@ return {
 
       local lspconfig = require('lspconfig')
 
+
+      -- Function to set up autoformatting on save for Go files
+      local on_attach = function(client, bufnr)
+          if client.name == "gopls" and client.supports_method("textDocument/formatting") then
+              vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+              vim.api.nvim_create_autocmd("BufWritePre", {
+                  group = augroup,
+                  buffer = bufnr,
+                  callback = function()
+                      vim.lsp.buf.format({ bufnr = bufnr, async = true })
+                  end,
+              })
+          end
+      end
+
+-- Create an augroup to manage autocommands
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+
       -- Configure Go LSP server (gopls)
       lspconfig.gopls.setup({
         filetypes = { 'go', 'gomod', 'gohtml', 'gotext', 'gowork' },  -- Ensure it only handles Go files
+        on_attach = on_attach,
         settings = {
           gopls = {
             analyses = {
@@ -39,6 +59,7 @@ return {
               shadow = true,
             },
             staticcheck = true,
+            gofumpt = true -- Ensure golps uses gofumpt for formatting
           },
         },
       })
