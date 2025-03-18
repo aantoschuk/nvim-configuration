@@ -1,7 +1,5 @@
 function TransparentBackground(color)
   -- Set a default color scheme if not provided
-  color = color or "rose-pine"
-  vim.cmd.colorscheme(color)
 
   -- Set transparent background for 'Normal' and 'NormalFloat' highlights
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -15,5 +13,5 @@ function TransparentBackground(color)
 end
 
 -- Apply transparent background with red ColorColumn
-TransparentBackground()
+-- TransparentBackground()
 

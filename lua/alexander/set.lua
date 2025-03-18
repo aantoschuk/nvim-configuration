@@ -45,4 +45,6 @@ vim.g.mapleader = " "
 -- split vertically to the right 
 vim.opt.splitright = true
 
+vim.cmd.colorscheme "catppuccin"
+
 

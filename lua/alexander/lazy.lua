@@ -26,7 +26,6 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     require('alexander.plugins.telescope'),
-    require('alexander.plugins.rose-pine'),
     require('alexander.plugins.treesitter'),
     require('alexander.plugins.fugitive'),
     require('alexander.plugins.undotree'),
@@ -35,6 +34,8 @@ require("lazy").setup({
     require('alexander.plugins.markdown-preview'),
     require('alexander.plugins.todo-comments'),
     require('alexander.plugins.trouble'),
+    require('alexander.plugins.catppuccin'),
+
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
