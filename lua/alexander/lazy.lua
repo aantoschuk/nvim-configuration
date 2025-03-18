@@ -35,6 +35,7 @@ require("lazy").setup({
     require('alexander.plugins.todo-comments'),
     require('alexander.plugins.trouble'),
     require('alexander.plugins.catppuccin'),
+    require('alexander.plugins.lualine'),
 
   },
   -- Configure any other settings here. See the documentation for more details.
