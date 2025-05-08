@@ -18,7 +18,7 @@ return {
       lsp.preset('recommended')  -- This sets up recommended defaults for LSP servers
 
       lsp.configure('eslint', {
-        enabled = false
+      enabled = false
       })
 
       -- Add mason setup to ensure LSP servers can be installed
@@ -99,7 +99,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<C-y>'] = cmp.mapping.confirm({select = true}),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-c>'] = cmp.mapping.complete(),
       })
     end,
   },

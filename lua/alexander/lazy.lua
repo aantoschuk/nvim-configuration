@@ -36,6 +36,7 @@ require("lazy").setup({
     require('alexander.plugins.trouble'),
     require('alexander.plugins.catppuccin'),
     require('alexander.plugins.lualine'),
+    require('alexander.plugins.mason-workaround')
 
   },
   -- Configure any other settings here. See the documentation for more details.
