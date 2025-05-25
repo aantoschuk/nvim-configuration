@@ -33,9 +33,13 @@ return {
             lookahead = true,  -- Automatically jump to text objects
             keymaps = {
               -- Define keymaps for selecting text objects (e.g., function, class, etc.)
-              ['af'] = '@function.outer',  -- Select the entire function
-              ['if'] = '@function.inner',  -- Select the inner part of a function
-            },
+              ['af'] = '@function.outer',     -- Select the entire function
+              ['if'] = '@function.inner',     -- Select just the inside/body of a function
+              ['al'] = '@loop.outer',         -- Select the entire loop
+              ['il'] = '@loop.inner',         -- Select the body of the loop
+              ['ac'] = '@conditional.outer',  -- Select the entire condition (if, if + else )
+              ['ic'] = '@conditional.inner',  -- Select only the inside of  the conditional 
+          },
           },
         },
 
