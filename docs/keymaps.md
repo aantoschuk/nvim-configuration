@@ -62,6 +62,25 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 ```
 
+## Panes and Windows
+
+Splits and Panes:
+
+Split vertically
+```
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+```
+
+Move focus to right split
+```
+vim.keymap.set("n", "<leader>wr", ":wincmd l<CR>")
+```
+
+Move focus to the left split
+```
+vim.keymap.set("n", "<leader>wl", ":wincmd h<CR>")
+```
+
 ## Harpoon
 
 Open Harpoon quick menu
@@ -76,4 +95,15 @@ To mark a file with the Harpoon plugin
 vim.api.nvim_set_keymap('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>', { noremap = true, silent = true })
 ```
 
+## Trouble
 
+Shows diagnostics, references, quickfix and location lists to help solve errors.
+
+```<leader>xx``` shows list of all the errors in the project
+```
+{
+    "<leader>xx",
+    "<cmd>Trouble diagnostics toggle<cr>",
+    desc = "Diagnostics (Trouble)",
+}
+```
